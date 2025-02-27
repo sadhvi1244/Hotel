@@ -3,8 +3,8 @@ import { FaRegCalendarAlt, FaUser, FaChild } from "react-icons/fa"; // Icons
 
 const BookRoom = () => {
   return (
-    <div className="w-full flex justify-center py-10 ">
-      <div className="bg-[#EEE0A9] rounded-3xl p-8 w-[80%] max-w-10xl shadow-md">
+    <div className="w-full flex justify-center py-10 px-4">
+      <div className="bg-[#EEE0A9] rounded-3xl p-6 sm:p-8 w-full max-w-5xl shadow-md">
         {/* Title Section */}
         <div className="text-center">
           <h1 className="text-2xl font-bold">Book a Room</h1>
@@ -12,30 +12,30 @@ const BookRoom = () => {
         </div>
 
         {/* Booking Options */}
-        <div className="flex justify-between items-center mt-6 gap-1">
+        <div className="flex flex-wrap justify-center sm:justify-between items-center mt-6 gap-4">
           {/* Date Section */}
-          <div>
+          <div className="w-full sm:w-auto flex flex-col items-center sm:items-start">
             <p className="font-semibold mb-1">Date</p>
-            <button className="flex items-center gap-2 bg-white p-3 rounded-lg shadow">
+            <button className="flex items-center gap-2 bg-white px-4 py-3 rounded-lg shadow w-full sm:w-auto">
               <FaRegCalendarAlt />
               Check Available
             </button>
           </div>
 
-          {/* Person Section */}
-          <div>
+          {/* Person Selection Section */}
+          <div className="w-full sm:w-auto flex flex-col items-center sm:items-start">
             <p className="font-semibold mb-1">Person</p>
-            <div className="flex items-center gap-2 bg-white p-3 rounded-lg shadow">
+            <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow w-full sm:w-auto">
               <FaUser />
               <span>Adults</span>
-              <select className="border-none outline-none">
+              <select className="border-none outline-none bg-transparent">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
               </select>
               <FaChild />
               <span>Children</span>
-              <select className="border-none outline-none">
+              <select className="border-none outline-none bg-transparent">
                 <option>0</option>
                 <option>1</option>
                 <option>2</option>
@@ -44,9 +44,11 @@ const BookRoom = () => {
           </div>
 
           {/* Book Now Button */}
-          <button className="bg-[#C89342] text-white font-bold px-6 py-3 rounded-lg shadow">
-            BOOK NOW
-          </button>
+          <div className="w-full sm:w-auto flex justify-center">
+            <button className="bg-[#C89342] text-white font-bold px-6 py-3 rounded-lg shadow w-full sm:w-auto">
+              BOOK NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>
